@@ -31,7 +31,8 @@ namespace Assignment1.Data
 
         public void RemoveAdult(int adultId)
         {
-            FileContext.Adults.RemoveAt(adultId);
+            Adult adultToRemove = FileContext.Adults.First(t => t.Id == adultId);
+            FileContext.Adults.Remove(adultToRemove);
             FileContext.SaveChanges();
         }
 

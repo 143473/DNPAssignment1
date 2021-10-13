@@ -16,7 +16,14 @@ else
     <EditForm Model="@userToEdit" OnValidSubmit="@Save">
         <DataAnnotationsValidator/>
         <ValidationSummary/>
+        
         <table class="tableAdd">
+                                   <tr>
+                                        <td>Id:</td>
+                                        <td>
+                                            <InputNumber Disabled="True" @bind-Value="userToEdit.Id"/>
+                                        </td>
+                                    </tr>
             <tr>
                 <td>UserName:</td>
                 <td>
@@ -41,7 +48,7 @@ else
             <tr>
                 <td>Security Level</td>
                 <td>
-                    <InputSelect Disabled="true" @bind-Value="userToEdit.SecurityLevel">
+                    <InputSelect @bind-Value="userToEdit.SecurityLevel">
                         <option value="1">Level 1</option>
                         <option value="2">Level 2</option>
                     </InputSelect>

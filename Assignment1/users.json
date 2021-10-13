@@ -35,7 +35,14 @@
     "SecurityLevel": 1
   },
   {
-    "Id": 5,
+    "Id": 7,
+    "UserName": "user1",
+    "Password": "1234",
+    "Role": "user",
+    "SecurityLevel": 1
+  },
+  {
+    "Id": 6,
     "UserName": "user",
     "Password": "1234",
     "Role": "user",

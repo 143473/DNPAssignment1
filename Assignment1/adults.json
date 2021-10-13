@@ -61,21 +61,6 @@
   },
   {
     "JobTitle": {
-      "JobTitle": "Service Advisor",
-      "Salary": 72532
-    },
-    "Id": 6,
-    "FirstName": "Anastasia",
-    "LastName": "Fitzgerald",
-    "HairColor": "Black",
-    "EyeColor": "Brown",
-    "Age": 44,
-    "Weight": 99.8,
-    "Height": 147,
-    "Sex": "F"
-  },
-  {
-    "JobTitle": {
       "JobTitle": "Janitor",
       "Salary": 61437
     },
@@ -193,35 +178,5 @@
     "Weight": 81.8,
     "Height": 172,
     "Sex": "M"
-  },
-  {
-    "JobTitle": {
-      "JobTitle": "Vice Principal",
-      "Salary": 72901
-    },
-    "Id": 4,
-    "FirstName": "Ophelia",
-    "LastName": "Nathan",
-    "HairColor": "Black",
-    "EyeColor": "Brown",
-    "Age": 70,
-    "Weight": 106,
-    "Height": 150,
-    "Sex": "F"
-  },
-  {
-    "JobTitle": {
-      "JobTitle": "saaaaaa",
-      "Salary": 1
-    },
-    "Id": 15,
-    "FirstName": "asd",
-    "LastName": "ads",
-    "HairColor": "ads",
-    "EyeColor": "asd",
-    "Age": 60,
-    "Weight": 123,
-    "Height": 123,
-    "Sex": "F"
   }
 ]

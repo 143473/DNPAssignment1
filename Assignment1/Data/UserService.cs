@@ -32,7 +32,8 @@ namespace Assignment1.Data
 
         public void RemoveUser(int userId)
         {
-            FileContext.Users.RemoveAt(userId);
+            User user = FileContext.Users.First(t => t.Id == userId);
+            FileContext.Users.Remove(user);
             FileContext.SaveChanges();
         }
 
