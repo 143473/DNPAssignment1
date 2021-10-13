@@ -1,4 +1,4 @@
-using System;
+
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
@@ -53,7 +53,7 @@ namespace FileData
             {
                 outputFile.Write(jsonAdults);
             }
-            
+
             string jsonUsers = JsonSerializer.Serialize(Users, new JsonSerializerOptions
             {
                 WriteIndented = true

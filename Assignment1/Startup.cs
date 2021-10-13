@@ -1,8 +1,5 @@
-
 using Microsoft.AspNetCore.Builder;
-
 using Microsoft.AspNetCore.Hosting;
-
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -32,9 +29,10 @@ namespace Assignment1
             services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
             services.AddAuthorization(options =>
             {
-                options.AddPolicy("user", a => a.RequireAuthenticatedUser().RequireClaim("Level", "1", "2","3"));
+                options.AddPolicy("user", a => a.RequireAuthenticatedUser().RequireClaim("Level", "1", "2", "3"));
                 options.AddPolicy("admin", a => a.RequireAuthenticatedUser().RequireClaim("Level", "3"));
-                options.AddPolicy("moderator", a => a.RequireAuthenticatedUser().RequireClaim("Role", "moderator","admin"));
+                options.AddPolicy("moderator",
+                    a => a.RequireAuthenticatedUser().RequireClaim("Role", "moderator", "admin"));
             });
         }
 

@@ -98,7 +98,7 @@ else
                 <td>@item.Height</td>
                 <td>@item.JobTitle.JobTitle</td>
                 <td>@item.JobTitle.Salary</td>
-                
+
                 <AuthorizeView Policy="moderator">
                     <td>
                         <button @onclick="@(() => RemoveAdult(item.Id))">
@@ -209,54 +209,51 @@ else
     {
         switch (orderBy)
         {
-            case "Id": 
+            case "Id":
                 ExecuteFilter();
                 adultsToShow.OrderBy(t => t.Id).ToList();
                 break;
-            case "FirstName": 
+            case "FirstName":
                 ExecuteFilter();
                 adultsToShow.OrderBy(t => t.FirstName).ToList();
                 break;
-            case "LastName": 
+            case "LastName":
                 ExecuteFilter();
                 adultsToShow.OrderBy(t => t.LastName).ToList();
                 break;
-            case "HairColor": 
+            case "HairColor":
                 ExecuteFilter();
                 adultsToShow.OrderBy(t => t.HairColor).ToList();
                 break;
-            case "EyeColor": 
+            case "EyeColor":
                 ExecuteFilter();
                 adultsToShow.OrderBy(t => t.EyeColor).ToList();
                 break;
-            case "Height": 
+            case "Height":
                 ExecuteFilter();
                 adultsToShow.OrderBy(t => t.Height).ToList();
                 break;
-            case "Age": 
+            case "Age":
                 ExecuteFilter();
                 adultsToShow.OrderBy(t => t.Age).ToList();
                 break;
-            case "Weight": 
+            case "Weight":
                 ExecuteFilter();
                 adultsToShow.OrderBy(t => t.Weight).ToList();
                 break;
-            case "Sex": 
+            case "Sex":
                 ExecuteFilter();
                 adultsToShow.OrderBy(t => t.Sex).ToList();
                 break;
-            case "JobTitle": 
+            case "JobTitle":
                 ExecuteFilter();
                 adultsToShow.OrderBy(t => t.JobTitle.JobTitle).ToList();
                 break;
-            case "Salary": 
+            case "Salary":
                 ExecuteFilter();
                 adultsToShow.OrderBy(t => t.JobTitle.Salary).ToList();
                 break;
-
         }
-
-        
     }
 
     private void Edit(int id)

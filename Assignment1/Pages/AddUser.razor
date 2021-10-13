@@ -12,34 +12,52 @@
 <EditForm Model="@newUser" OnValidSubmit="@AddNewUser" Context="b">
     <DataAnnotationsValidator/>
     <ValidationSummary/>
-<table class="tableAdd">
-        <tr><td><label>User name:</label></td> <td> <input type="text" placeholder="user name" @bind-value="newUser.UserName"/></td> </tr>
-        <tr><td><label>Password</label></td> <td> <input type="password" placeholder="password" @bind-value="newUser.Password"/></td> </tr>
-    <tr><td>
-        <button class="btn btn-outline-dark" type="submit"> Create</button>
-    </td></tr>
-</table>
+    <table class="tableAdd">
+        <tr>
+            <td>
+                <label>User name:</label>
+            </td>
+            <td>
+                <input type="text" placeholder="user name" @bind-value="newUser.UserName"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Password</label>
+            </td>
+            <td>
+                <input type="password" placeholder="password" @bind-value="newUser.Password"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class="btn btn-outline-dark" type="submit"> Create</button>
+            </td>
+        </tr>
+    </table>
 </EditForm>
 
-    @code {
-        private User newUser = new User();
+@code {
+    private User newUser = new User();
 
-        private void AddNewUser()
+    private void AddNewUser()
+    {
+        UserService.AddUser(newUser);
+        PerformLogin();
+    }
+
+    public async Task PerformLogin()
+    {
+        var errorMessage = "";
+        try
         {
-            UserService.AddUser(newUser);
-            PerformLogin();
+            ((CustomAuthenticationStateProvider) AuthenticationStateProvider).ValidateLogin(newUser.UserName, newUser.Password);
+            NavigationManager.NavigateTo("/");
         }
-        public async Task PerformLogin()
+        catch (Exception e)
         {
-            var errorMessage = "";
-            try
-            {
-                ((CustomAuthenticationStateProvider) AuthenticationStateProvider).ValidateLogin(newUser.UserName, newUser.Password);
-                NavigationManager.NavigateTo("/");
-            }
-            catch (Exception e)
-            {
-                errorMessage = e.Message;
-            }
+            errorMessage = e.Message;
         }
     }
+
+}
