@@ -1,0 +1,44 @@
+[
+  {
+    "Id": 0,
+    "UserName": "admin",
+    "Password": "1234",
+    "Role": "admin",
+    "SecurityLevel": 3
+  },
+  {
+    "Id": 1,
+    "UserName": "claudiu",
+    "Password": "1234",
+    "Role": "user",
+    "SecurityLevel": 1
+  },
+  {
+    "Id": 2,
+    "UserName": "emanuel",
+    "Password": "1234",
+    "Role": "moderator",
+    "SecurityLevel": 2
+  },
+  {
+    "Id": 3,
+    "UserName": "user3",
+    "Password": "asdfa",
+    "Role": "user",
+    "SecurityLevel": 1
+  },
+  {
+    "Id": 4,
+    "UserName": "user123",
+    "Password": "12345",
+    "Role": "user",
+    "SecurityLevel": 1
+  },
+  {
+    "Id": 5,
+    "UserName": "user",
+    "Password": "1234",
+    "Role": "user",
+    "SecurityLevel": 1
+  }
+]

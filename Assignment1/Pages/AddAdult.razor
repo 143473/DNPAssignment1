@@ -1,0 +1,47 @@
+@page "/AddAdult"
+
+@using Assignment1.Data
+@using Assignment1.Models
+@using Microsoft.AspNetCore.Components
+@inject IAdultData AdultData
+@inject NavigationManager NavigationManager
+
+
+<h3> Add Adult to the list </h3>
+<EditForm Model="@newAdult" OnValidSubmit="@AddNewAdult" Context="b">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    <table class="tableAdd">
+        <tr><td>First Name:</td> <td><InputText @bind-Value="newAdult.FirstName"/></td> </tr>
+        <tr><td> Last Name:</td> <td><InputText @bind-Value="newAdult.LastName"/></td> </tr>
+        <tr><td> Hair Color:</td> <td> <InputText @bind-Value="newAdult.HairColor"/></td></tr>
+        <tr><td>Eye Color:</td> <td><InputText @bind-Value="newAdult.EyeColor"/></td></tr>
+        <tr><td> Age:</td>  <td> <InputNumber @bind-Value="newAdult.Age"/></td></tr>
+        <tr><td>Sex:</td>  <td><InputSelect @bind-Value="newAdult.Sex">
+            <option value="">Select sex</option>
+            <option value="F">Female</option>
+            <option value="M">Male</option>
+        </InputSelect></td></tr>
+        <tr><td>  Weight:</td><td> <InputNumber  @bind-Value="newAdult.Weight"/></td></tr>
+        <tr><td>Height:</td><td><InputNumber @bind-Value="newAdult.Height"/></td></tr>
+        <tr><td>    Job:</td><td><InputText @bind-Value="newAdult.JobTitle.JobTitle"/></td></tr>
+        <tr><td>Salary:</td><td><InputNumber @bind-Value="newAdult.JobTitle.Salary"/></td></tr>
+        <tr><td><p class="actions">
+            <button class="btn btn-outline-dark" type="submit">Create</button>
+        </p></td></tr>
+    </table>
+
+
+</EditForm>
+
+
+@code {
+    private Adult newAdult = new Adult();
+
+    private void AddNewAdult()
+    {
+        AdultData.AddAdult(newAdult);
+        NavigationManager.NavigateTo("/AdultsList");
+    }
+
+}
