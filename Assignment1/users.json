@@ -47,5 +47,19 @@
     "Password": "1234",
     "Role": "user",
     "SecurityLevel": 1
+  },
+  {
+    "Id": 8,
+    "UserName": "qweqeq",
+    "Password": "123",
+    "Role": "user",
+    "SecurityLevel": 1
+  },
+  {
+    "Id": 9,
+    "UserName": "asd",
+    "Password": "asd",
+    "Role": "user",
+    "SecurityLevel": 1
   }
 ]

@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment1", "Assignment1\Assignment1.csproj", "{077E9FAC-251A-478F-AFB9-58910F91FD29}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assignment2", "Assignment2", "{248A6524-48AB-4E1A-AD22-C41FFAD700F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{F840AA1A-26F7-4A42-85E7-3491CF08E739}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,12 @@ Global
 		{077E9FAC-251A-478F-AFB9-58910F91FD29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{077E9FAC-251A-478F-AFB9-58910F91FD29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{077E9FAC-251A-478F-AFB9-58910F91FD29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F840AA1A-26F7-4A42-85E7-3491CF08E739}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F840AA1A-26F7-4A42-85E7-3491CF08E739}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F840AA1A-26F7-4A42-85E7-3491CF08E739}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F840AA1A-26F7-4A42-85E7-3491CF08E739}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F840AA1A-26F7-4A42-85E7-3491CF08E739} = {248A6524-48AB-4E1A-AD22-C41FFAD700F2}
 	EndGlobalSection
 EndGlobal
